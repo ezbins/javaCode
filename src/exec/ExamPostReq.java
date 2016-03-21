@@ -25,6 +25,7 @@ public class ExamPostReq {
 	
 	private void sendPost() throws Exception {
 		String link = "http://124.219.72.74/test/ReceiveServlet";
+		//String link = "http://192.168.1.63/test/ReceiveServlet";
 		//String link = "http://192.168.1.130:8080/test/ReceiveServlet";
 		URL url = new URL(link);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -39,7 +40,7 @@ public class ExamPostReq {
 			
 			json.put("Status", "1");
 			json.put("Id", "123");
-			json.put("Name", "");
+			json.put("Name", "Mary");
 			json.put("MeasureDate","2016/01/26 20:40:04");
 			json.put("Sdnn","0");
 			json.put("Lf", "0");
@@ -50,7 +51,7 @@ public class ExamPostReq {
 			json.put("LfStandard", "0");
 			json.put("HfStandard", "0");
 			json.put("Message", "no more messages");
-			json.put("ReportDate", "2016/01/26 20:40:04");
+			json.put("ReportDate", "2016/02/19 19:40:04");
 			json.put("Pdf", pdfContent);
 			
 		} catch (Exception ex) {
